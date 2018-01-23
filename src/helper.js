@@ -11,7 +11,7 @@ export default class DistrictRepository {
         obj[location] = {}
       }
 
-      if(typeof item.Data != 'number'){
+      if (typeof item.Data !== 'number') {
         item.Data = 0;
       }
 
