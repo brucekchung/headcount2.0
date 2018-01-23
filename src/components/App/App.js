@@ -15,15 +15,14 @@ class App extends Component {
 
   importData() {
     const district = new DistrictRepository(data);
-    return district.data;
+    return district.findAllMatches();
   }
 
   render() {
-    {this.importData()}
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
-        <CardContainer />
+        <CardContainer data={this.state.data} />
       </div>
     );
   }
