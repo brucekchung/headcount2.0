@@ -35,4 +35,20 @@ export default class DistrictRepository {
 
     return this.data[match];
   }
+
+  findAllMatches(search) {
+    const keys = Object.keys(this.data)
+    const allDataArray = keys.reduce((arr, key) => {
+      arr.push(this.data[key])
+      return arr
+    }, [])
+
+    if(!search) {
+      return allDataArray
+    }
+
+    const allMatches = allDataArray.filter(item => item.location.includes(search.toUpperCase()))
+    return allMatches
+  }
+
 }
