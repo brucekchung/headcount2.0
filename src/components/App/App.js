@@ -26,8 +26,8 @@ class App extends Component {
     return (
       <div>
         <h1>Welcome To Headcount 2.0</h1>
-        <Input handleSearch={this.handleSearch} />
-        <CardContainer data={this.state.data} />
+        <Input handleSearch={ this.handleSearch } />
+        <CardContainer data={ this.state.data } />
       </div>
     );
   }
