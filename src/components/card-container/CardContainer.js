@@ -3,15 +3,16 @@ import Card from '../card/Card';
 import PropTypes from 'prop-types';
 
 const CardContainer = ({ data }) => {
+  const renderedCards = () => {
+    return data.map((item, index) => <Card { ...item }
+                                           key={ item.id + index } /> )
+  }
+
   return (
     <div>
-      {
-        data.map((item, index) => <Card location={item.location}
-                                   data={item.data}
-                                   key={index} />)
-      }
+      { renderedCards() }
     </div>
-  )
+  ) 
 }
 
 CardContainer.propTypes = {

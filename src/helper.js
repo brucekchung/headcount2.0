@@ -19,7 +19,8 @@ export default class DistrictRepository {
 
       obj[location].location = item.Location.toUpperCase();
       obj[location].data = 
-        Object.assign({...obj[location].data}, yearData)
+        Object.assign({...obj[location].data}, yearData);
+      obj[location].id = Date.now();
 
       return obj
     }, {})

@@ -13,16 +13,16 @@ class Input extends Component {
   handleChange = e => {
     const value = e.target.value;
 
-    this.setState({value: value});
+    this.setState({ value: value });
     this.props.handleSearch(value);
   }
 
   render() {
     return (
       <input type="text" 
-             value={this.state.value} 
+             value={ this.state.value } 
              placeholder="Search districts" 
-             onChange={this.handleChange} />
+             onChange={ this.handleChange } />
     )
   }
 }
