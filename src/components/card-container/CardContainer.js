@@ -2,14 +2,15 @@ import React from 'react';
 import Card from '../card/Card';
 import PropTypes from 'prop-types';
 
-const CardContainer = ({ data }) => {
+const CardContainer = ({ data, handleCompare }) => {
   const renderedCards = () => {
     return data.map((item, index) => <Card { ...item }
-                                           key={ item.id + index } /> )
+                                           key={ item.id + index }
+                                           handleCompare={ handleCompare } /> )
   }
 
   return (
-    <div>
+    <div >
       { renderedCards() }
     </div>
   ) 

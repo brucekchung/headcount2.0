@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import CardContainer from '../card-container/CardContainer';
 import Input from '../input/Input';
+import CompareSection from '../CompareSection/CompareSection' 
 import data from '../../data/kindergartners_in_full_day_program.js';
 import DistrictRepository from '../../helper.js';
 import PropTypes from 'prop-types';
@@ -13,7 +14,8 @@ class App extends Component {
     super();
 
     this.state = {
-      data: district.findAllMatches()
+      data: district.findAllMatches(),
+      compare: []
     }
   }
 
@@ -22,12 +24,23 @@ class App extends Component {
     this.setState({ data: allMatches });
   }
 
+  handleCompare = (e) => {
+    const location = e.target.closest('div').firstChild.innerText;
+    const match = this.state.data.find( dataPoint => dataPoint.location === location);
+    
+    if(this.state.compare.length < 2){
+      this.setState({ compare: [...this.state.compare, match] });
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <h1>Welcome To Headcount 2.0</h1>
         <Input handleSearch={ this.handleSearch } />
-        <CardContainer data={ this.state.data } />
+        
+        <CardContainer data={ this.state.data }
+                       handleCompare={ this.handleCompare } />
       </div>
     );
   }
