@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class Input extends Component {
   constructor(props) {
@@ -24,6 +25,13 @@ class Input extends Component {
              onChange={this.handleChange} />
     )
   }
+}
+
+Input.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
+  state: PropTypes.shape({
+    value: PropTypes.string.isRequired
+  })
 }
 
 export default Input;
