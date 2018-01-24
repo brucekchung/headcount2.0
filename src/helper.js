@@ -51,4 +51,26 @@ export default class DistrictRepository {
     return allMatches
   }
 
+  compareDistrictAverages(loc1, loc2) {
+    const avg1 = this.findAverage(loc1)
+    const avg2 = this.findAverage(loc2)
+    const compared = parseFloat((avg1/avg2).toPrecision(3))
+
+    return {
+             [loc1.toUpperCase()]: avg1,
+             [loc2.toUpperCase()]: avg2,
+             "compared": compared
+           }
+  }
+
+  findAverage(location) {
+    const { data } = this.findByName(location)
+    const total = Object.values(data).reduce((total, data) => {
+      total += data;
+      return total
+    })
+    const avg = total / Object.values(data).length
+
+    return parseFloat(avg.toPrecision(3))
+  }
 }

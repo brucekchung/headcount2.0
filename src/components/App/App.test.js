@@ -37,10 +37,12 @@ describe('App', () => {
 
   it('should load data into state', () => {
     const district = new DistrictRepository(data);
-    wrapper.instance().handleSearch()
-    wrapper.update()
-    console.log('state: ', wrapper.state)
-    expect(wrapper.state).toHaveLength(181)
+    const inst = wrapper.instance();
+    inst.handleSearch()
+
+    // wrapper.update()
+    //console.log('state: ', wrapper.state)
+    expect(wrapper.state.data).toHaveLength(181)
   })
 })
 
