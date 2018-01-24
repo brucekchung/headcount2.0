@@ -4,6 +4,7 @@ import CardContainer from '../card-container/CardContainer';
 import data from '../../data/kindergartners_in_full_day_program.js';
 import DistrictRepository from '../../helper.js';
 import Input from '../input/Input';
+import PropTypes from 'prop-types';
 
 const district = new DistrictRepository(data);
 
@@ -12,12 +13,8 @@ class App extends Component {
     super();
 
     this.state = {
-      data: this.importData()
+      data: district.findAllMatches()
     }
-  }
-
-  importData() {
-    return district.findAllMatches();
   }
 
   handleSearch = input => {
@@ -34,6 +31,12 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  state: PropTypes.shape({
+    data: PropTypes.arrayOf(PropTypes.object).isRequired
+  })
 }
 
 export default App;
