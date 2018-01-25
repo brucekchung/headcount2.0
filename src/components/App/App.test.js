@@ -44,6 +44,24 @@ describe('App', () => {
     expect(inst.state.compare).toEqual([])
   })
 
+  it('should be able to compare two districts', () => {
+    const inst = wrapper.instance()
+    const obj1 = {
+      "location": "Colorado",
+      "Data": 0.74118
+    }
+    const obj2 = {
+      "location": "ACADEMY 20",
+      "Data": 0.39159
+    }
+
+    inst.setState({compare: [obj1, obj2]})
+    const actual = inst.calculateAverage(obj1, obj2)
+    const expected = { COLORADO: 0.53, 'ACADEMY 20': 0.407, compared: 1.3 }
+
+    expect(actual).toEqual(expected)
+  })
+
 })
 
 
