@@ -34,13 +34,13 @@ class App extends Component {
     }
 
     if (compareMatch) {
-      const remaining = this.state.compare.filter( obj => obj.location !== location);
+      const remaining = this.state.compare.filter( obj => obj.location !== location );
       this.setState({ compare: remaining });
     }
   } 
 
   calculateAverage = (a, b) => {
-    return district.compareDistrictAverages(a.location, b.location) ;
+    return district.compareDistrictAverages(a.location, b.location);
   }
 
   render() {
@@ -54,7 +54,8 @@ class App extends Component {
                           calculateAverage={ this.calculateAverage }/>
         }
         <CardContainer data={ this.state.data }
-                       handleCompare={ this.handleCompare } />
+                       handleCompare={ this.handleCompare }
+                       selectedCards={ this.state.compare } />
       </div>
     );
   }

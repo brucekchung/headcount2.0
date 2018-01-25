@@ -2,7 +2,7 @@ import React from 'react';
 import './Card.css';
 import PropTypes from 'prop-types';
 
-const Card = ({ location, data, id, handleCompare }) => {
+const Card = ({ className, location, data, handleCompare }) => {
   const renderedData = () => {
     return Object.keys(data).map((year, index) => {
       let percentage = data[year];
@@ -17,9 +17,8 @@ const Card = ({ location, data, id, handleCompare }) => {
   }
 
   return (
-    <div className="card"
-         onClick={ handleCompare }
-         id={ id }>
+    <div className={ className }
+         onClick={ handleCompare }>
       <h2>{ location }</h2>
       <ul>
       { renderedData() }
