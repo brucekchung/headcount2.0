@@ -4,13 +4,26 @@ import PropTypes from 'prop-types';
 
 const CompareSection = ({ data, calculateAverage }) => {
   const [a, b] = data;
-  let averages;
 
-  if (data.length === 2) {
-    averages = calculateAverage(a, b);
+  const renderSingle = (obj) => {
+    return <Card {...obj} className="card selected" />
   }
 
-  const compareCard = () => {
+  const renderMultiple = (a, b) => {
+    if (data.length === 2) {
+      let averages = calculateAverage(a, b);
+
+      return (
+        <div>
+          { renderSingle(a) }
+          { compareCard(a, b, averages) }
+          { renderSingle(b) }
+        </div>
+      )
+    } 
+  }
+
+  const compareCard = (a, b, averages) => {
     return(
       <div className="card">
         <h3>{ a.location }: { averages[a.location] } </h3>
@@ -19,24 +32,10 @@ const CompareSection = ({ data, calculateAverage }) => {
       </div>
     )
   }
-
   
   return (
     <div>
-      {
-        data.length === 1 &&
-        <Card { ...a } className="card selected" />
-      }
-      {
-        data.length === 2 &&
-        <div>
-          <Card { ...a } className="card selected" />
-          { 
-            compareCard() 
-          }
-          <Card { ...b } className="card selected" />
-        </div>
-      }
+      { renderMultiple(a, b) || renderSingle(a) }
     </div>
   )
 }
