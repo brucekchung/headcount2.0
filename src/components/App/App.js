@@ -62,7 +62,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  state: PropTypes.shape({
+    state: PropTypes.shape({
     data: PropTypes.arrayOf(PropTypes.object).isRequired
   })
 }

@@ -30,20 +30,26 @@ describe('App', () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it('should contain in Input and CardContainer component', () => {
-    expect(wrapper.find(<Input />)).toBeDefined()
-    expect(wrapper.find(<CardContainer />)).toBeDefined()
-  })
-
   it('should load data into state', () => {
-    const district = new DistrictRepository(data);
-    const inst = wrapper.instance();
+    const district = new DistrictRepository(data)
+    const inst = wrapper.instance()
+    
     inst.handleSearch()
-
-    // wrapper.update()
-    //console.log('state: ', wrapper.state)
-    expect(wrapper.state.data).toHaveLength(181)
+    expect(inst.state.data).toHaveLength(181)
   })
+
+  it('should begin with nothing in state.compare', () => {
+    const inst = wrapper.instance()
+
+    expect(inst.state.compare).toEqual([])
+  })
+
+  it.skip('should add cards to state.compare when clicked', () => {
+    const inst = wrapper.instance()
+
+    wrapper.find('').simulate('click', );
+  })
+
 })
 
 
