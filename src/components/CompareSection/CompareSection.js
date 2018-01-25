@@ -13,12 +13,14 @@ const CompareSection = ({ data, calculateAverage }) => {
   const compareCard = () => {
     return(
       <div className="card">
-        <h3>{a.location}: {averages[a.location]} </h3>
-        <h2>{averages.compared}</h2>
-        <h3>{b.location}: {averages[b.location]}</h3>
+        <h3>{ a.location }: { averages[a.location] } </h3>
+        <h2>{ averages.compared }</h2>
+        <h3>{ b.location }: { averages[b.location] }</h3>
       </div>
     )
   }
+
+  
   return (
     <div>
       {

@@ -6,6 +6,7 @@ const CardContainer = ({ data, handleCompare }) => {
   const renderedCards = () => {
     return data.map((item, index) => <Card { ...item }
                                            key={ item.id + index }
+                                           id={ item.id }
                                            handleCompare={ handleCompare } /> )
   }
 

@@ -26,10 +26,16 @@ class App extends Component {
 
   handleCompare = (e) => {
     const location = e.target.closest('div').firstChild.innerText;
-    const match = this.state.data.find( dataPoint => dataPoint.location === location);
-    
-    if(this.state.compare.length < 2){
+    const match = this.state.data.find( dataPoint => dataPoint.location === location );
+    const compareMatch = this.state.compare.find( obj => obj.location === location );
+
+    if (this.state.compare.length < 2) {
       this.setState({ compare: [...this.state.compare, match] });
+    }
+
+    if (compareMatch) {
+      const remaining = this.state.compare.filter( obj => obj.location !== location);
+      this.setState({ compare: remaining });
     }
   } 
 
