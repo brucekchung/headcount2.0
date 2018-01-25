@@ -31,6 +31,10 @@ class App extends Component {
     if(this.state.compare.length < 2){
       this.setState({ compare: [...this.state.compare, match] });
     }
+  } 
+
+  calculateAverage = (a, b) => {
+    return district.compareDistrictAverages(a.location, b.location) ;
   }
 
   render() {
@@ -38,7 +42,11 @@ class App extends Component {
       <div className="App">
         <h1>Welcome To Headcount 2.0</h1>
         <Input handleSearch={ this.handleSearch } />
-        
+        {
+          this.state.compare.length > 0 &&
+          <CompareSection data={ this.state.compare }
+                          calculateAverage={ this.calculateAverage }/>
+        }
         <CardContainer data={ this.state.data }
                        handleCompare={ this.handleCompare } />
       </div>
