@@ -25,16 +25,16 @@ const CompareSection = ({ data, calculateAverage }) => {
     <div>
       {
         data.length === 1 &&
-        <Card { ...a } />
+        <Card { ...a } className="card selected" />
       }
       {
         data.length === 2 &&
         <div>
-          <Card { ...a } />
+          <Card { ...a } className="card selected" />
           { 
             compareCard() 
           }
-          <Card { ...b } />
+          <Card { ...b } className="card selected" />
         </div>
       }
     </div>
