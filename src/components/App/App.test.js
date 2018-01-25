@@ -44,12 +44,6 @@ describe('App', () => {
     expect(inst.state.compare).toEqual([])
   })
 
-  it.skip('should add cards to state.compare when clicked', () => {
-    const inst = wrapper.instance()
-
-    wrapper.find('').simulate('click', );
-  })
-
 })
 
 
