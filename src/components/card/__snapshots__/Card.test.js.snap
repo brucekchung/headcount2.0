@@ -1,0 +1,390 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should match the snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    data={
+        Object {
+            "Data": 0.39465,
+            "DataFormat": "Percent",
+            "Location": "Colorado",
+            "TimeFrame": 2007,
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h2 />,
+        <ul>
+          <li
+                    className="over-fifty"
+          >
+                    Location
+                    : 
+                    Colorado
+          </li>
+          <li
+                    className="over-fifty"
+          >
+                    TimeFrame
+                    : 
+                    2007
+          </li>
+          <li
+                    className="over-fifty"
+          >
+                    DataFormat
+                    : 
+                    Percent
+          </li>
+          <li
+                    className="under-fifty"
+          >
+                    Data
+                    : 
+                    0.39465
+          </li>
+</ul>,
+      ],
+      "className": undefined,
+      "onClick": undefined,
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h2",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <li
+              className="over-fifty"
+>
+              Location
+              : 
+              Colorado
+</li>,
+            <li
+              className="over-fifty"
+>
+              TimeFrame
+              : 
+              2007
+</li>,
+            <li
+              className="over-fifty"
+>
+              DataFormat
+              : 
+              Percent
+</li>,
+            <li
+              className="under-fifty"
+>
+              Data
+              : 
+              0.39465
+</li>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "0",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Location",
+                ": ",
+                "Colorado",
+              ],
+              "className": "over-fifty",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Location",
+              ": ",
+              "Colorado",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "1",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "TimeFrame",
+                ": ",
+                2007,
+              ],
+              "className": "over-fifty",
+            },
+            "ref": null,
+            "rendered": Array [
+              "TimeFrame",
+              ": ",
+              2007,
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "2",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "DataFormat",
+                ": ",
+                "Percent",
+              ],
+              "className": "over-fifty",
+            },
+            "ref": null,
+            "rendered": Array [
+              "DataFormat",
+              ": ",
+              "Percent",
+            ],
+            "type": "li",
+          },
+          Object {
+            "instance": null,
+            "key": "3",
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                "Data",
+                ": ",
+                0.39465,
+              ],
+              "className": "under-fifty",
+            },
+            "ref": null,
+            "rendered": Array [
+              "Data",
+              ": ",
+              0.39465,
+            ],
+            "type": "li",
+          },
+        ],
+        "type": "ul",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h2 />,
+          <ul>
+            <li
+                        className="over-fifty"
+            >
+                        Location
+                        : 
+                        Colorado
+            </li>
+            <li
+                        className="over-fifty"
+            >
+                        TimeFrame
+                        : 
+                        2007
+            </li>
+            <li
+                        className="over-fifty"
+            >
+                        DataFormat
+                        : 
+                        Percent
+            </li>
+            <li
+                        className="under-fifty"
+            >
+                        Data
+                        : 
+                        0.39465
+            </li>
+</ul>,
+        ],
+        "className": undefined,
+        "onClick": undefined,
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h2",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <li
+                className="over-fifty"
+>
+                Location
+                : 
+                Colorado
+</li>,
+              <li
+                className="over-fifty"
+>
+                TimeFrame
+                : 
+                2007
+</li>,
+              <li
+                className="over-fifty"
+>
+                DataFormat
+                : 
+                Percent
+</li>,
+              <li
+                className="under-fifty"
+>
+                Data
+                : 
+                0.39465
+</li>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "0",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Location",
+                  ": ",
+                  "Colorado",
+                ],
+                "className": "over-fifty",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Location",
+                ": ",
+                "Colorado",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "1",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "TimeFrame",
+                  ": ",
+                  2007,
+                ],
+                "className": "over-fifty",
+              },
+              "ref": null,
+              "rendered": Array [
+                "TimeFrame",
+                ": ",
+                2007,
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "2",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "DataFormat",
+                  ": ",
+                  "Percent",
+                ],
+                "className": "over-fifty",
+              },
+              "ref": null,
+              "rendered": Array [
+                "DataFormat",
+                ": ",
+                "Percent",
+              ],
+              "type": "li",
+            },
+            Object {
+              "instance": null,
+              "key": "3",
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  "Data",
+                  ": ",
+                  0.39465,
+                ],
+                "className": "under-fifty",
+              },
+              "ref": null,
+              "rendered": Array [
+                "Data",
+                ": ",
+                0.39465,
+              ],
+              "type": "li",
+            },
+          ],
+          "type": "ul",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

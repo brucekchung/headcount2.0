@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 const Card = ({ className, location, data, handleCompare }) => {
   const renderedData = () => {
     return Object.keys(data).map((year, index) => {
-      let percentage = data[year];
-      let name = percentage < 0.5 ? "under-fifty" : "over-fifty";
+      const percentage = data[year];
+      const name = percentage < 0.5 ? "under-fifty" : "over-fifty";
 
       return ( 
         <li className={ name } key={ index }>
@@ -30,7 +30,6 @@ const Card = ({ className, location, data, handleCompare }) => {
 Card.propTypes = {
   location: PropTypes.string.isRequired,
   data: PropTypes.object.isRequired
-
 }
 
 export default Card;
