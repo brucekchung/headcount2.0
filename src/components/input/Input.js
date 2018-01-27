@@ -3,7 +3,7 @@ import { func, shape, string } from 'prop-types';
 
 class Input extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       value: ''
@@ -11,7 +11,7 @@ class Input extends Component {
   }
 
   handleChange = e => {
-    const value = e.target.value;
+    const value = e.target.value
 
     this.setState({ value });
     this.props.handleSearch(value);
@@ -19,10 +19,13 @@ class Input extends Component {
 
   render() {
     return (
-      <input type="text" 
+      <div className="controls">
+        <input type="text" 
              value={ this.state.value } 
              placeholder="Search districts" 
              onChange={ this.handleChange } />
+        <button onClick={ this.props.clearSelection }>Clear</button>
+      </div>
     )
   }
 }
@@ -34,4 +37,4 @@ Input.propTypes = {
   })
 }
 
-export default Input;
+export default Input

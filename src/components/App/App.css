@@ -1,1 +1,29 @@
-/*APP COMPONENT RELATED CSS GOES HERE*/
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.controls input {
+  font-size: 1.5em;
+}
+
+.compare-top {
+  /*padding: 10px 0 10px 0;*/
+  height: 330px;
+  background-color: #2C3E50;
+  margin-bottom: 25px;
+}
+
+/*.comparison div {
+  background-color: yellow;
+}*/

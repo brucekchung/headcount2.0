@@ -1,6 +1,7 @@
 import React from 'react';
 import Card from '../card/Card';
 import { arrayOf, object } from 'prop-types';
+import './CardContainer.css'
 
 const CardContainer = ({ data, handleCompare, selectedCards }) => {
   const className = location => {
@@ -17,7 +18,7 @@ const CardContainer = ({ data, handleCompare, selectedCards }) => {
   }
 
   return (
-    <div >
+    <div className="card-container">
       { renderedCards() }
     </div>
   ) 
@@ -27,4 +28,4 @@ CardContainer.propTypes = {
   data: arrayOf(object).isRequired
 }
 
-export default CardContainer;
+export default CardContainer
