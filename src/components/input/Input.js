@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Input extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       value: ''
@@ -11,18 +11,21 @@ class Input extends Component {
   }
 
   handleChange = e => {
-    const value = e.target.value;
+    const value = e.target.value
 
-    this.setState({ value: value });
-    this.props.handleSearch(value);
+    this.setState({ value: value })
+    this.props.handleSearch(value)
   }
 
   render() {
     return (
-      <input type="text" 
+      <div className="controls">
+        <input type="text" 
              value={ this.state.value } 
              placeholder="Search districts" 
              onChange={ this.handleChange } />
+        <button onClick={ this.props.clearSelection }>Clear</button>
+      </div>
     )
   }
 }
@@ -34,4 +37,4 @@ Input.propTypes = {
   })
 }
 
-export default Input;
+export default Input

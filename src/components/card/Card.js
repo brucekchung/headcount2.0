@@ -1,12 +1,12 @@
-import React from 'react';
-import './Card.css';
-import PropTypes from 'prop-types';
+import React from 'react'
+import './Card.css'
+import PropTypes from 'prop-types'
 
 const Card = ({ className, location, data, handleCompare }) => {
   const renderedData = () => {
     return Object.keys(data).map((year, index) => {
       const percentage = data[year];
-      const name = percentage < 0.5 ? "under-fifty" : "over-fifty";
+      const name = percentage < 0.5 ? "under-fifty" : "over-fifty"
 
       return ( 
         <li className={ name } key={ index }>
@@ -15,7 +15,7 @@ const Card = ({ className, location, data, handleCompare }) => {
       )
     })
   }
-
+ 
   return (
     <div className={ className }
          onClick={ handleCompare }>
@@ -32,4 +32,4 @@ Card.propTypes = {
   data: PropTypes.object.isRequired
 }
 
-export default Card;
+export default Card

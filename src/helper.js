@@ -13,34 +13,30 @@ export default class DistrictRepository {
     return data;
   }
 
-  // roundData(data) {
-  //   return parseFloat(data.toPrecision(3));
-  // }
-
   roundData = (data) => parseFloat(data.toPrecision(3))
 
   formatData(data) {
     this.cleanData(data);
-    return data.reduce((obj, item) => {
+    return data.reduce((format, item) => {
       const location = item.Location.toUpperCase();
       
-      if (!obj[location]) {
-        obj[location] = {}
+      if (!format[location]) {
+        format[location] = {}
       }
 
       const yearData = {
         [item.TimeFrame]: this.roundData(item.Data) 
       }
-      const data = Object.assign({ ...obj[location].data }, yearData);
+      const data = Object.assign({ ...format[location].data }, yearData);
       const id = Date.now();
 
-      obj[location] = {
+      format[location] = {
         location,
         data,
         id
       }      
 
-      return obj
+      return format
     }, {})
   }
 
@@ -53,12 +49,14 @@ export default class DistrictRepository {
 
   findAllMatches(search = '') {
     const keys = Object.keys(this.data)
-    const allDataArray = keys.reduce((arr, key) => {
-      arr.push(this.data[key])
-      return arr
+    const allDataArray = keys.reduce((allData, key) => {
+      allData.push(this.data[key])
+      return allData
     }, [])
 
-    const allMatches = allDataArray.filter(item => item.location.includes(search.toUpperCase()))
+    const allMatches = allDataArray.filter(
+      item => item.location.includes(search.toUpperCase())
+    )
     return allMatches
   }
 
@@ -68,10 +66,10 @@ export default class DistrictRepository {
     const compared = this.roundData(avg1/avg2);
 
     return {
-             [loc1.toUpperCase()]: avg1,
-             [loc2.toUpperCase()]: avg2,
-             "compared": compared
-           }
+      [loc1.toUpperCase()]: avg1,
+      [loc2.toUpperCase()]: avg2,
+      "compared": compared
+    }
   }
 
   findAverage(location) {

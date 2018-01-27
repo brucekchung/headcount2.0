@@ -1,0 +1,46 @@
+
+.comparison {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.compare-top .card {
+  height: 300px;
+  display: inline-block;
+}
+
+.render-multiple {
+  display: flex;
+}
+
+.center {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #00E640;
+}
+
+.center h2 {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  font-size: 3em;
+}
+
+.center h3 {
+  margin: 30px 0 30px 0;
+  font-size: 1em;
+  text-align: center;
+}
+
+.comparison .card {
+  color: white;
+  margin: 0;
+}
+
