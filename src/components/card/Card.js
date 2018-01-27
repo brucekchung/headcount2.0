@@ -10,12 +10,15 @@ const Card = ({ className, location, data, handleCompare }) => {
 
       return ( 
         <li className={ name } key={ index }>
-           { year }: { percentage }
+           { year } 
+           <span className="percentage">
+           { percentage }
+           </span>
         </li> 
       )
     })
   }
- 
+
   return (
     <div className={ className }
          onClick={ handleCompare }>
