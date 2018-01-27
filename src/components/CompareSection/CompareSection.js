@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '../card/Card';
-import PropTypes from 'prop-types';
+import { arrayOf, func, object } from 'prop-types';
 
 const CompareSection = ({ data, calculateAverage }) => {
   const [a, b] = data;
@@ -38,6 +38,11 @@ const CompareSection = ({ data, calculateAverage }) => {
       { renderMultiple(a, b) || renderSingle(a) }
     </div>
   )
+}
+
+CompareSection.propTypes = {
+  data: arrayOf(object).isRequired,
+  calculateAverage: func.isRequired
 }
 
 export default CompareSection

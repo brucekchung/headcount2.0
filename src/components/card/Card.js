@@ -1,6 +1,6 @@
 import React from 'react';
 import './Card.css';
-import PropTypes from 'prop-types';
+import { string, object } from 'prop-types';
 
 const Card = ({ className, location, data, handleCompare }) => {
   const renderedData = () => {
@@ -28,8 +28,8 @@ const Card = ({ className, location, data, handleCompare }) => {
 }
 
 Card.propTypes = {
-  location: PropTypes.string.isRequired,
-  data: PropTypes.object.isRequired
+  location: string.isRequired,
+  data: object.isRequired
 }
 
 export default Card;
