@@ -19,10 +19,13 @@ class Input extends Component {
 
   render() {
     return (
-      <input type="text" 
+      <div className="controls">
+        <input type="text" 
              value={ this.state.value } 
              placeholder="Search districts" 
              onChange={ this.handleChange } />
+        <button onClick={ this.props.clearSelection }>Clear</button>
+      </div>
     )
   }
 }

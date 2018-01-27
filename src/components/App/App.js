@@ -40,15 +40,16 @@ class App extends Component {
     }
   } 
 
-  calculateAverage = (a, b) => {
-    return district.compareDistrictAverages(a.location, b.location)
-  }
+  calculateAverage = (a, b) => district.compareDistrictAverages(a.location, b.location)
+
+  clearSelection = () => this.setState({compare: []})
 
   render() {
     return (
       <div className="App">
         <h1>Welcome To Headcount 2.0</h1>
-        <Input handleSearch={ this.handleSearch } />
+        <Input handleSearch={ this.handleSearch }
+               clearSelection={ this.clearSelection } />
         <section className="compare-top">
           {
             this.state.compare.length > 0 &&
@@ -70,4 +71,4 @@ App.propTypes = {
   })
 }
 
-export default App;
+export default App
