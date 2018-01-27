@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Input extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       value: ''
@@ -11,10 +11,10 @@ class Input extends Component {
   }
 
   handleChange = e => {
-    const value = e.target.value;
+    const value = e.target.value
 
-    this.setState({ value: value });
-    this.props.handleSearch(value);
+    this.setState({ value: value })
+    this.props.handleSearch(value)
   }
 
   render() {
@@ -34,4 +34,4 @@ Input.propTypes = {
   })
 }
 
-export default Input;
+export default Input

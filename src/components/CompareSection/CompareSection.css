@@ -1,0 +1,9 @@
+
+.comparison {
+  display: flex;
+  justify-content: space-around;
+}
+
+.comparison .card {
+  margin: auto;
+}

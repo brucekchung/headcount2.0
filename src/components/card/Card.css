@@ -1,7 +1,25 @@
+
 .card {
   border: 1px solid black;
   display: inline-block;
-  width: 300px;
+  width: 230px;
+  margin-bottom: 20px;
+  border-radius: 20px
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+li {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card h2 {
+  text-align: center;
 }
 
 .under-fifty {
@@ -9,5 +27,5 @@
 }
 
 .selected {
-  border: 1px solid red;
+  border: 3px solid blue;
 }

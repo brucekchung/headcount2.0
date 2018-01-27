@@ -1,9 +1,10 @@
-import React from 'react';
-import Card from '../card/Card';
-import PropTypes from 'prop-types';
+import React from 'react'
+import Card from '../card/Card'
+import PropTypes from 'prop-types'
+import './CompareSection.css'
 
 const CompareSection = ({ data, calculateAverage }) => {
-  const [a, b] = data;
+  const [a, b] = data
 
   const renderSingle = (obj) => {
     return <Card {...obj} className="card selected" />
@@ -11,7 +12,7 @@ const CompareSection = ({ data, calculateAverage }) => {
 
   const renderMultiple = (a, b) => {
     if (data.length === 2) {
-      let averages = calculateAverage(a, b);
+      let averages = calculateAverage(a, b)
 
       return (
         <div>
@@ -34,7 +35,7 @@ const CompareSection = ({ data, calculateAverage }) => {
   }
   
   return (
-    <div>
+    <div className="comparison">
       { renderMultiple(a, b) || renderSingle(a) }
     </div>
   )

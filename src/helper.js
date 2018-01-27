@@ -13,10 +13,6 @@ export default class DistrictRepository {
     return data;
   }
 
-  // roundData(data) {
-  //   return parseFloat(data.toPrecision(3));
-  // }
-
   roundData = (data) => parseFloat(data.toPrecision(3))
 
   formatData(data) {
