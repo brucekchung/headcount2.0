@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import { func, shape, string } from 'prop-types';
 
 class Input extends Component {
   constructor(props) {
@@ -13,8 +13,8 @@ class Input extends Component {
   handleChange = e => {
     const value = e.target.value
 
-    this.setState({ value: value })
-    this.props.handleSearch(value)
+    this.setState({ value });
+    this.props.handleSearch(value);
   }
 
   render() {
@@ -31,9 +31,9 @@ class Input extends Component {
 }
 
 Input.propTypes = {
-  handleSearch: PropTypes.func.isRequired,
-  state: PropTypes.shape({
-    value: PropTypes.string.isRequired
+  handleSearch: func.isRequired,
+  state: shape({
+    value: string.isRequired
   })
 }
 

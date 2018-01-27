@@ -1,6 +1,6 @@
-import React from 'react'
-import Card from '../card/Card'
-import PropTypes from 'prop-types'
+import React from 'react';
+import Card from '../card/Card';
+import { arrayOf, object } from 'prop-types';
 import './CardContainer.css'
 
 const CardContainer = ({ data, handleCompare, selectedCards }) => {
@@ -25,7 +25,7 @@ const CardContainer = ({ data, handleCompare, selectedCards }) => {
 }
 
 CardContainer.propTypes = {
-  data: PropTypes.arrayOf(PropTypes.object).isRequired
+  data: arrayOf(object).isRequired
 }
 
 export default CardContainer

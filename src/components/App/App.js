@@ -3,10 +3,10 @@ import './App.css'
 import CardContainer from '../card-container/CardContainer'
 import Input from '../input/Input'
 import CompareSection from '../CompareSection/CompareSection' 
-import data from '../../data/kindergartners_in_full_day_program.js'
-import DistrictRepository from '../../helper.js'
-import PropTypes from 'prop-types'
-import './App.css'
+
+import data from '../../data/kindergartners_in_full_day_program.js';
+import DistrictRepository from '../../helper.js';
+import { shape, arrayOf, object } from 'prop-types';
 
 const district = new DistrictRepository(data)
 
@@ -66,8 +66,8 @@ class App extends Component {
 }
 
 App.propTypes = {
-    state: PropTypes.shape({
-    data: PropTypes.arrayOf(PropTypes.object).isRequired
+    state: shape({
+      data: arrayOf(object).isRequired
   })
 }
 
