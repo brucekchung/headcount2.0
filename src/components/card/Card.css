@@ -1,10 +1,11 @@
 
 .card {
-  border: 1px solid black;
   display: inline-block;
+  box-shadow: 3px 3px 2px #888888;
   width: 230px;
   margin-bottom: 20px;
-  border-radius: 20px
+  border-radius: 20px;
+  background-color: #ECF0F1;
 }
 
 ul {
@@ -20,12 +21,24 @@ li {
 
 .card h2 {
   text-align: center;
+  font-size: 1em;
 }
 
-.under-fifty {
-  color: red;
+.under-fifty .percentage {
+  background-color: red;
+  color: white;
 }
 
 .selected {
   border: 3px solid blue;
+}
+
+.percentage {
+  border-radius: 7px;
+  margin: 3px;
+  height: 18px;
+  width: 55px;
+  display: inline-block;
+  color: white;
+  background-color: green;
 }
