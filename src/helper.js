@@ -4,36 +4,28 @@ export default class DistrictRepository {
   }
 
   cleanData(data) {
-    data.forEach( item => {
+    return data.forEach( item => {
       if (typeof item.Data !== 'number') {
         item.Data = 0;
       }
     })
-
-    return data;
   }
 
-  roundData = (data) => parseFloat(data.toPrecision(3))
+  roundData = data => parseFloat(data.toPrecision(3))
 
   formatData(data) {
     this.cleanData(data);
     return data.reduce((format, item) => {
-      const location = item.Location.toUpperCase();
-      
-      if (!format[location]) {
-        format[location] = {}
-      }
+      const location = item.Location.toUpperCase()
 
-      const yearData = {
-        [item.TimeFrame]: this.roundData(item.Data) 
-      }
-      const data = Object.assign({ ...format[location].data }, yearData);
-      const id = Date.now();
+      format[location] = format[location] || {}
+
+      const yearData = { [item.TimeFrame]: this.roundData(item.Data) }
 
       format[location] = {
         location,
-        data,
-        id
+        data: Object.assign({ ...format[location].data }, yearData),
+        id: Date.now()
       }      
 
       return format
@@ -47,22 +39,28 @@ export default class DistrictRepository {
     return this.data[match];
   }
 
-  findAllMatches(search = '') {
-    const keys = Object.keys(this.data)
-    const allDataArray = keys.reduce((allData, key) => {
+  reduceData = array => {
+    return array.reduce( (allData, key) => {
       allData.push(this.data[key])
       return allData
     }, [])
+  }
 
-    const allMatches = allDataArray.filter(
+  filterData = (array, search) => {
+    return array.filter(
       item => item.location.includes(search.toUpperCase())
     )
-    return allMatches
+  }
+
+  findAllMatches(search = '') {
+    let allMatches
+    const keys = Object.keys(this.data)
+    const allDataArray = this.reduceData(keys)
+    return allMatches = this.filterData(allDataArray, search)
   }
 
   compareDistrictAverages(loc1, loc2) {
-    const avg1 = this.findAverage(loc1)
-    const avg2 = this.findAverage(loc2)
+    const [avg1, avg2]  = [this.findAverage(loc1), this.findAverage(loc2)]
     const compared = this.roundData(avg1/avg2);
 
     return {
@@ -72,13 +70,18 @@ export default class DistrictRepository {
     }
   }
 
-  findAverage(location) {
-    const { data } = this.findByName(location)
-    const total = Object.values(data).reduce((total, data) => {
+  calculateTotal = array => {
+    return array.reduce((total, data) => {
       total += data;
       return total
     })
-    const avg = total / Object.values(data).length
+  }
+
+  findAverage(location) {
+    const { data } = this.findByName(location)
+    const values = Object.values(data)
+    const total = this.calculateTotal(values)
+    const avg = total / values.length
 
     return this.roundData(avg)
   }
