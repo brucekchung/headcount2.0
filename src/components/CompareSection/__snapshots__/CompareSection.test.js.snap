@@ -9,15 +9,21 @@ ShallowWrapper {
     data={
         Array [
             Object {
-              "Data": 0.74118,
-              "DataFormat": "Percent",
-              "TimeFrame": 2014,
+              "data": Object {
+                "2004": 0.756,
+                "2005": 0.658,
+                "2006": 0.253,
+              },
+              "id": 1,
               "location": "ColoraDo",
             },
             Object {
-              "Data": 0.39159,
-              "DataFormat": "Percent",
-              "TimeFrame": 2007,
+              "data": Object {
+                "2004": 0.465,
+                "2005": 0.758,
+                "2006": 0.856,
+              },
+              "id": 2,
               "location": "ACADEMY 20",
             },
           ]
@@ -39,10 +45,15 @@ ShallowWrapper {
         className="render-multiple"
 >
         <Card
-                Data={0.74118}
-                DataFormat="Percent"
-                TimeFrame={2014}
                 className="card selected"
+                data={
+                        Object {
+                                "2004": 0.756,
+                                "2005": 0.658,
+                                "2006": 0.253,
+                              }
+                }
+                id={1}
                 location="ColoraDo"
         />
         <div
@@ -63,10 +74,15 @@ ShallowWrapper {
                 </h3>
         </div>
         <Card
-                Data={0.39159}
-                DataFormat="Percent"
-                TimeFrame={2007}
                 className="card selected"
+                data={
+                        Object {
+                                "2004": 0.465,
+                                "2005": 0.758,
+                                "2006": 0.856,
+                              }
+                }
+                id={2}
                 location="ACADEMY 20"
         />
 </div>,
@@ -80,10 +96,15 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Card
-            Data={0.74118}
-            DataFormat="Percent"
-            TimeFrame={2014}
             className="card selected"
+            data={
+                        Object {
+                                    "2004": 0.756,
+                                    "2005": 0.658,
+                                    "2006": 0.253,
+                                  }
+            }
+            id={1}
             location="ColoraDo"
 />,
           <div
@@ -104,10 +125,15 @@ ShallowWrapper {
             </h3>
 </div>,
           <Card
-            Data={0.39159}
-            DataFormat="Percent"
-            TimeFrame={2007}
             className="card selected"
+            data={
+                        Object {
+                                    "2004": 0.465,
+                                    "2005": 0.758,
+                                    "2006": 0.856,
+                                  }
+            }
+            id={2}
             location="ACADEMY 20"
 />,
         ],
@@ -120,10 +146,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "Data": 0.74118,
-            "DataFormat": "Percent",
-            "TimeFrame": 2014,
             "className": "card selected",
+            "data": Object {
+              "2004": 0.756,
+              "2005": 0.658,
+              "2006": 0.253,
+            },
+            "id": 1,
             "location": "ColoraDo",
           },
           "ref": null,
@@ -213,10 +242,13 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "Data": 0.39159,
-            "DataFormat": "Percent",
-            "TimeFrame": 2007,
             "className": "card selected",
+            "data": Object {
+              "2004": 0.465,
+              "2005": 0.758,
+              "2006": 0.856,
+            },
+            "id": 2,
             "location": "ACADEMY 20",
           },
           "ref": null,
@@ -238,10 +270,15 @@ ShallowWrapper {
           className="render-multiple"
 >
           <Card
-                    Data={0.74118}
-                    DataFormat="Percent"
-                    TimeFrame={2014}
                     className="card selected"
+                    data={
+                              Object {
+                                        "2004": 0.756,
+                                        "2005": 0.658,
+                                        "2006": 0.253,
+                                      }
+                    }
+                    id={1}
                     location="ColoraDo"
           />
           <div
@@ -262,10 +299,15 @@ ShallowWrapper {
                     </h3>
           </div>
           <Card
-                    Data={0.39159}
-                    DataFormat="Percent"
-                    TimeFrame={2007}
                     className="card selected"
+                    data={
+                              Object {
+                                        "2004": 0.465,
+                                        "2005": 0.758,
+                                        "2006": 0.856,
+                                      }
+                    }
+                    id={2}
                     location="ACADEMY 20"
           />
 </div>,
@@ -279,10 +321,15 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Card
-              Data={0.74118}
-              DataFormat="Percent"
-              TimeFrame={2014}
               className="card selected"
+              data={
+                            Object {
+                                          "2004": 0.756,
+                                          "2005": 0.658,
+                                          "2006": 0.253,
+                                        }
+              }
+              id={1}
               location="ColoraDo"
 />,
             <div
@@ -303,10 +350,15 @@ ShallowWrapper {
               </h3>
 </div>,
             <Card
-              Data={0.39159}
-              DataFormat="Percent"
-              TimeFrame={2007}
               className="card selected"
+              data={
+                            Object {
+                                          "2004": 0.465,
+                                          "2005": 0.758,
+                                          "2006": 0.856,
+                                        }
+              }
+              id={2}
               location="ACADEMY 20"
 />,
           ],
@@ -319,10 +371,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "Data": 0.74118,
-              "DataFormat": "Percent",
-              "TimeFrame": 2014,
               "className": "card selected",
+              "data": Object {
+                "2004": 0.756,
+                "2005": 0.658,
+                "2006": 0.253,
+              },
+              "id": 1,
               "location": "ColoraDo",
             },
             "ref": null,
@@ -412,10 +467,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "Data": 0.39159,
-              "DataFormat": "Percent",
-              "TimeFrame": 2007,
               "className": "card selected",
+              "data": Object {
+                "2004": 0.465,
+                "2005": 0.758,
+                "2006": 0.856,
+              },
+              "id": 2,
               "location": "ACADEMY 20",
             },
             "ref": null,
