@@ -1,8 +1,8 @@
 import React from 'react'
 import CardContainer from './CardContainer'
 import {shallow} from 'enzyme'
-import DistrictRepository from '../../helper.js';
-import kinderData from '../../data/kindergartners_in_full_day_program.js';
+import DistrictRepository from '../../helper.js'
+import kinderData from '../../data/kindergartners_in_full_day_program.js'
 
 import {configure} from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
@@ -12,7 +12,7 @@ describe('CardContainer', () => {
   let wrapper
   const district = new DistrictRepository(kinderData)
   const data = district.findAllMatches()
-  const selected = [  {
+  const selected = [{
     "Location": "Colorado",
     "TimeFrame": 2014,
     "DataFormat": "Percent",
