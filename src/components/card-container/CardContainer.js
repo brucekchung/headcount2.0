@@ -11,10 +11,13 @@ const CardContainer = ({ data, handleCompare, selectedCards }) => {
   }
 
   const renderedCards = () => {
-    return data.map((item, index) => <Card { ...item }
-                                           className={ className(item.location) }
-                                           key={ item.id + index }
-                                           handleCompare={ handleCompare } /> )
+    return data.map((item, index) => 
+      <Card { ...item }
+        className={ className(item.location) }
+        key={ item.id + index }
+        handleCompare={ handleCompare } 
+      /> 
+    )
   }
 
   return (
