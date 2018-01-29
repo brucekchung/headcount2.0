@@ -2,16 +2,15 @@ import React from 'react'
 import Input from './Input'
 import {shallow} from 'enzyme'
 
-import {configure} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-configure({ adapter: new Adapter() })
-
 describe('Input', () => {
   let wrapper;
+  const clearSelection = jest.fn()
   const handleSearch = jest.fn()
 
   beforeEach(() => {
-    wrapper = shallow(<Input handleSearch={handleSearch} />)
+    wrapper = shallow(
+      <Input handleSearch={handleSearch} clearSelection={clearSelection}/>
+    )
   })
 
   it('should exist', () => {
