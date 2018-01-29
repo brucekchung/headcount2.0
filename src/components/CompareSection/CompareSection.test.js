@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react'
 import CompareSection from './CompareSection'
 import {shallow} from 'enzyme'

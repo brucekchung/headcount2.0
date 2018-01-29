@@ -53,10 +53,9 @@ export default class DistrictRepository {
   }
 
   findAllMatches(search = '') {
-    let allMatches
     const keys = Object.keys(this.data)
     const allDataArray = this.reduceData(keys)
-    return allMatches = this.filterData(allDataArray, search)
+    return this.filterData(allDataArray, search)
   }
 
   compareDistrictAverages(loc1, loc2) {
