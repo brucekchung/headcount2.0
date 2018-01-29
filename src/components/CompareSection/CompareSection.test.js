@@ -11,7 +11,8 @@ configure({ adapter: new Adapter() })
 describe('CompareSection', () => {
   let wrapper
   const district = new DistrictRepository(kinderData)
-  const calculateAverage = (a, b) => district.compareDistrictAverages(a.location, b.location)
+  const calculateAverage = (first, second) => 
+    district.compareDistrictAverages(first.location, second.location)
   const compare = [{
     "location": "ColoraDo",
     "data": {2004: 0.756, 2005: 0.658, 2006: 0.253},
@@ -24,8 +25,9 @@ describe('CompareSection', () => {
   }]
 
   beforeEach(() => {
-    wrapper = shallow(<CompareSection data={compare}
-                                      calculateAverage={calculateAverage} />)
+    wrapper = shallow(
+      <CompareSection data={compare} calculateAverage={calculateAverage} />
+    )
   })
 
   it('should exist', () => {
