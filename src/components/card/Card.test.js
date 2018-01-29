@@ -2,10 +2,6 @@ import React from 'react'
 import Card from './Card'
 import {shallow} from 'enzyme'
 
-import {configure} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-configure({ adapter: new Adapter() })
-
 describe('Card', () => {
   let wrapper
   const data = {
@@ -17,7 +13,9 @@ describe('Card', () => {
   const key = 245245098
 
   beforeEach(() => {
-    wrapper = shallow(<Card data={data} key={key} />)
+    wrapper = shallow(
+      <Card data={data} key={key} className='card' location='denver'/>
+    )
   })
 
   it('should exist', () => {

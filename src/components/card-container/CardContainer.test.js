@@ -4,14 +4,11 @@ import {shallow} from 'enzyme'
 import DistrictRepository from '../../helper.js'
 import kinderData from '../../data/kindergartners_in_full_day_program.js'
 
-import {configure} from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-configure({ adapter: new Adapter() })
-
 describe('CardContainer', () => {
   let wrapper
   const district = new DistrictRepository(kinderData)
   const data = district.findAllMatches()
+  const handleCompare = jest.fn()
   const selected = [{
     "Location": "Colorado",
     "TimeFrame": 2014,
@@ -26,7 +23,9 @@ describe('CardContainer', () => {
   }]
 
   beforeEach(() => {
-    wrapper = shallow(<CardContainer data={data} selectedCards={selected} />)
+    wrapper = shallow(
+      <CardContainer data={data} selectedCards={selected} handleCompare={handleCompare}/>
+    )
   })
 
   it('should exist', () => {

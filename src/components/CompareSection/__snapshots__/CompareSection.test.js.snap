@@ -60,7 +60,7 @@ ShallowWrapper {
                 className="card center"
         >
                 <h3>
-                        ColoraDo
+                        ACADEMY 20
                         : 
                          
                 </h3>
@@ -111,7 +111,7 @@ ShallowWrapper {
             className="card center"
 >
             <h3>
-                        ColoraDo
+                        ACADEMY 20
                         : 
                          
             </h3>
@@ -166,7 +166,7 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <h3>
-                ColoraDo
+                ACADEMY 20
                 : 
                  
 </h3>,
@@ -189,7 +189,7 @@ ShallowWrapper {
               "nodeType": "host",
               "props": Object {
                 "children": Array [
-                  "ColoraDo",
+                  "ACADEMY 20",
                   ": ",
                   undefined,
                   " ",
@@ -197,7 +197,7 @@ ShallowWrapper {
               },
               "ref": null,
               "rendered": Array [
-                "ColoraDo",
+                "ACADEMY 20",
                 ": ",
                 undefined,
                 " ",
@@ -285,7 +285,7 @@ ShallowWrapper {
                     className="card center"
           >
                     <h3>
-                              ColoraDo
+                              ACADEMY 20
                               : 
                                
                     </h3>
@@ -336,7 +336,7 @@ ShallowWrapper {
               className="card center"
 >
               <h3>
-                            ColoraDo
+                            ACADEMY 20
                             : 
                              
               </h3>
@@ -391,7 +391,7 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 <h3>
-                  ColoraDo
+                  ACADEMY 20
                   : 
                    
 </h3>,
@@ -414,7 +414,7 @@ ShallowWrapper {
                 "nodeType": "host",
                 "props": Object {
                   "children": Array [
-                    "ColoraDo",
+                    "ACADEMY 20",
                     ": ",
                     undefined,
                     " ",
@@ -422,7 +422,7 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": Array [
-                  "ColoraDo",
+                  "ACADEMY 20",
                   ": ",
                   undefined,
                   " ",

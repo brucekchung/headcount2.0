@@ -5,6 +5,7 @@ ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Card
+    className="card"
     data={
         Object {
             "Data": 0.39465,
@@ -13,6 +14,7 @@ ShallowWrapper {
             "TimeFrame": 2007,
           }
     }
+    location="denver"
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -27,39 +29,53 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
-        <h2 />,
+        <h2>
+          denver
+</h2>,
         <ul>
           <li
                     className="over-fifty"
           >
                     Location
-                    : 
-                    Colorado
+                    <span
+                              className="percentage"
+                    >
+                              Colorado
+                    </span>
           </li>
           <li
                     className="over-fifty"
           >
                     TimeFrame
-                    : 
-                    2007
+                    <span
+                              className="percentage"
+                    >
+                              2007
+                    </span>
           </li>
           <li
                     className="over-fifty"
           >
                     DataFormat
-                    : 
-                    Percent
+                    <span
+                              className="percentage"
+                    >
+                              Percent
+                    </span>
           </li>
           <li
                     className="under-fifty"
           >
                     Data
-                    : 
-                    0.39465
+                    <span
+                              className="percentage"
+                    >
+                              0.39465
+                    </span>
           </li>
 </ul>,
       ],
-      "className": undefined,
+      "className": "card",
       "onClick": undefined,
     },
     "ref": null,
@@ -69,10 +85,10 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": undefined,
+          "children": "denver",
         },
         "ref": null,
-        "rendered": null,
+        "rendered": "denver",
         "type": "h2",
       },
       Object {
@@ -85,29 +101,41 @@ ShallowWrapper {
               className="over-fifty"
 >
               Location
-              : 
-              Colorado
+              <span
+                            className="percentage"
+              >
+                            Colorado
+              </span>
 </li>,
             <li
               className="over-fifty"
 >
               TimeFrame
-              : 
-              2007
+              <span
+                            className="percentage"
+              >
+                            2007
+              </span>
 </li>,
             <li
               className="over-fifty"
 >
               DataFormat
-              : 
-              Percent
+              <span
+                            className="percentage"
+              >
+                            Percent
+              </span>
 </li>,
             <li
               className="under-fifty"
 >
               Data
-              : 
-              0.39465
+              <span
+                            className="percentage"
+              >
+                            0.39465
+              </span>
 </li>,
           ],
         },
@@ -120,16 +148,29 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "Location",
-                ": ",
-                "Colorado",
+                <span
+                  className="percentage"
+>
+                  Colorado
+</span>,
               ],
               "className": "over-fifty",
             },
             "ref": null,
             "rendered": Array [
               "Location",
-              ": ",
-              "Colorado",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Colorado",
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": "Colorado",
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -140,16 +181,29 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "TimeFrame",
-                ": ",
-                2007,
+                <span
+                  className="percentage"
+>
+                  2007
+</span>,
               ],
               "className": "over-fifty",
             },
             "ref": null,
             "rendered": Array [
               "TimeFrame",
-              ": ",
-              2007,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 2007,
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": 2007,
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -160,16 +214,29 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "DataFormat",
-                ": ",
-                "Percent",
+                <span
+                  className="percentage"
+>
+                  Percent
+</span>,
               ],
               "className": "over-fifty",
             },
             "ref": null,
             "rendered": Array [
               "DataFormat",
-              ": ",
-              "Percent",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Percent",
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": "Percent",
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -180,16 +247,29 @@ ShallowWrapper {
             "props": Object {
               "children": Array [
                 "Data",
-                ": ",
-                0.39465,
+                <span
+                  className="percentage"
+>
+                  0.39465
+</span>,
               ],
               "className": "under-fifty",
             },
             "ref": null,
             "rendered": Array [
               "Data",
-              ": ",
-              0.39465,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": 0.39465,
+                  "className": "percentage",
+                },
+                "ref": null,
+                "rendered": 0.39465,
+                "type": "span",
+              },
             ],
             "type": "li",
           },
@@ -206,39 +286,53 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
-          <h2 />,
+          <h2>
+            denver
+</h2>,
           <ul>
             <li
                         className="over-fifty"
             >
                         Location
-                        : 
-                        Colorado
+                        <span
+                                    className="percentage"
+                        >
+                                    Colorado
+                        </span>
             </li>
             <li
                         className="over-fifty"
             >
                         TimeFrame
-                        : 
-                        2007
+                        <span
+                                    className="percentage"
+                        >
+                                    2007
+                        </span>
             </li>
             <li
                         className="over-fifty"
             >
                         DataFormat
-                        : 
-                        Percent
+                        <span
+                                    className="percentage"
+                        >
+                                    Percent
+                        </span>
             </li>
             <li
                         className="under-fifty"
             >
                         Data
-                        : 
-                        0.39465
+                        <span
+                                    className="percentage"
+                        >
+                                    0.39465
+                        </span>
             </li>
 </ul>,
         ],
-        "className": undefined,
+        "className": "card",
         "onClick": undefined,
       },
       "ref": null,
@@ -248,10 +342,10 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": undefined,
+            "children": "denver",
           },
           "ref": null,
-          "rendered": null,
+          "rendered": "denver",
           "type": "h2",
         },
         Object {
@@ -264,29 +358,41 @@ ShallowWrapper {
                 className="over-fifty"
 >
                 Location
-                : 
-                Colorado
+                <span
+                                className="percentage"
+                >
+                                Colorado
+                </span>
 </li>,
               <li
                 className="over-fifty"
 >
                 TimeFrame
-                : 
-                2007
+                <span
+                                className="percentage"
+                >
+                                2007
+                </span>
 </li>,
               <li
                 className="over-fifty"
 >
                 DataFormat
-                : 
-                Percent
+                <span
+                                className="percentage"
+                >
+                                Percent
+                </span>
 </li>,
               <li
                 className="under-fifty"
 >
                 Data
-                : 
-                0.39465
+                <span
+                                className="percentage"
+                >
+                                0.39465
+                </span>
 </li>,
             ],
           },
@@ -299,16 +405,29 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "Location",
-                  ": ",
-                  "Colorado",
+                  <span
+                    className="percentage"
+>
+                    Colorado
+</span>,
                 ],
                 "className": "over-fifty",
               },
               "ref": null,
               "rendered": Array [
                 "Location",
-                ": ",
-                "Colorado",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Colorado",
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": "Colorado",
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -319,16 +438,29 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "TimeFrame",
-                  ": ",
-                  2007,
+                  <span
+                    className="percentage"
+>
+                    2007
+</span>,
                 ],
                 "className": "over-fifty",
               },
               "ref": null,
               "rendered": Array [
                 "TimeFrame",
-                ": ",
-                2007,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 2007,
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": 2007,
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -339,16 +471,29 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "DataFormat",
-                  ": ",
-                  "Percent",
+                  <span
+                    className="percentage"
+>
+                    Percent
+</span>,
                 ],
                 "className": "over-fifty",
               },
               "ref": null,
               "rendered": Array [
                 "DataFormat",
-                ": ",
-                "Percent",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Percent",
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": "Percent",
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
@@ -359,16 +504,29 @@ ShallowWrapper {
               "props": Object {
                 "children": Array [
                   "Data",
-                  ": ",
-                  0.39465,
+                  <span
+                    className="percentage"
+>
+                    0.39465
+</span>,
                 ],
                 "className": "under-fifty",
               },
               "ref": null,
               "rendered": Array [
                 "Data",
-                ": ",
-                0.39465,
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": 0.39465,
+                    "className": "percentage",
+                  },
+                  "ref": null,
+                  "rendered": 0.39465,
+                  "type": "span",
+                },
               ],
               "type": "li",
             },
